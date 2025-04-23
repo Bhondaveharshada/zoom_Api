@@ -5,6 +5,7 @@ import { AppRoutingRoutingModule } from './app-routing-routing.module';
 import { ClientComponent } from '../client/client.component';
 import { HostComponent } from '../host/host.component';
 import { CreatemeetComponent } from '../createmeet/createmeet.component';
+import { ClientJoinComponent } from '../client-join/client-join.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,9 @@ const routes: Routes = [
  },
  {
   path:'host', component:HostComponent,
+ },
+ {
+  path:'client-join', component:ClientJoinComponent
  }
 ];
 

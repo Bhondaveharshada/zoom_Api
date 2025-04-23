@@ -1,13 +1,31 @@
 
-<main>
-    <h1>Zoom Meeting SDK Sample Angular</h1>
-    <!-- Dependencies for client view and component view -->
-  
-    <!-- For Component View -->
-    <div id="meetingSDKElement">
-      <!-- Zoom Meeting SDK Component View Rendered Here -->
-    </div>
-  
-  
-    <button (click)="getSignature()">Join Meeting</button>
-  </main>
+<div  class="table-responsive" style="overflow-y: auto;">
+  <table class="table table-hover mt-3 text-center table-bordered">
+    <thead>
+      <tr>
+        <th>Sr.No</th>
+        <th>Meeting Data</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let meeting of meetings;let i = index ">
+        <td>{{i +1}}</td>
+        <td>
+          <ul>{{ meeting.topic }}</ul>
+          <ul>{{ meeting.agenda }}</ul>
+          <ul>{{ meeting.start_time | date:'short'  }}</ul>
+          <ul>{{meeting.id}}</ul>
+        </td>
+  <!--       <td>{{ meeting.topic }}</td>
+        <td>{{ meeting.agenda }}</td>
+        <td>{{ meeting.start_time | date:'short'  }}</td>
+        <td>{{ meeting.id }}</td> -->
+        <td>
+          <button class="btn btn-primary" (click)="startHostMeeting(meeting.id, meeting.password)">Start</button>
+          <button class="btn btn-danger" (click)="endMeeting(meeting.id)">End</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>

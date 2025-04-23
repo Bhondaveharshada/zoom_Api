@@ -1,1 +1,59 @@
-<p>host works!</p>
+<section class="d-flex justify-content-center align-items-center min-vh-100 bg-light">
+    <div class="text-center">
+      <h1 class="mb-4">Zoom Meeting Start Meeting By Host</h1>
+      
+      <!-- For Component View -->
+      <div id="meetingSDKElement" class="zoom-meeting-component">
+        <!-- Zoom Meeting SDK Component View Rendered Here -->
+      </div>
+      
+      
+
+      
+      <!-- <button (click)="getSignature()">Join Meeting</button> -->
+    </div>
+
+
+   <!--  <div class="mb-4">
+      <h2 class="h4 text-secondary">Video Recorder</h2>
+     
+  
+      <div class="d-flex justify-content-between">
+        <button class="start-recording btn btn-primary btn-lg" type="button">Record Screen</button>
+        <button class="stop-recording btn btn-danger btn-lg" type="button" disabled>Stop Recording</button>
+      </div>
+    </div>
+  
+    <div class="recorded-video-wrap d-none">
+      <h2 class="h4 text-secondary">Recorded Video</h2>
+      <video src="" class="recorded-video bg-black w-100 mb-3"></video>
+  
+      <div class="d-flex justify-content-center">
+        <a class="download-video btn btn-success btn-lg" href="#" download="video.mp4" disabled>Download</a>
+      </div>
+    </div>  -->  
+
+    <div class="mb-4">
+      <h2 class="h4 text-secondary">Video Recorder</h2>
+    
+      <div class="d-flex justify-content-between">
+        <button #startBtn class="start-recording btn btn-primary btn-lg" style="position: relative;" type="button" (click)="startRecording()">Record Screen</button>
+        <button #stopBtn class="stop-recording btn btn-danger btn-lg" type="button" disabled (click)="stopRecording()">Stop Recording</button>
+      </div>
+
+     
+    </div>
+    
+    <div class="recorded-video-wrap d-none">
+      <h2 class="h4 text-secondary">Recorded Video</h2>
+      <video #recordedVideo class="recorded-video bg-black w-100 mb-3" controls></video>
+    
+      <div class="d-flex justify-content-center">
+        <a #downloadBtn class="download-video btn btn-success btn-lg" href="#" download="video.mp4" disabled>Download</a>
+      </div>
+    </div>
+    
+
+</section>
+ 
+    

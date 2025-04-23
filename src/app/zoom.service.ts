@@ -9,6 +9,10 @@ export class ZoomService {
 
 
   createMeet(body:any){
-    return this.http.post('http://localhost:3000/create-meeting',body)
+    return this.http.post('http://localhost:4000/create-meeting',body)
    }
+
+  getMeeting(){
+    return this.http.get('http://localhost:4000/get-meeting')
+  }
 }

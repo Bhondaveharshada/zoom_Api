@@ -61,7 +61,15 @@
                   "maximumError": "10kb"
                 }
               ]
-            }
+            },
+            "development": { 
+                "buildOptimizer": false,
+                "optimization": false,
+                "vendorChunk": true,
+                "extractLicenses": false,
+                "sourceMap": true,
+                "namedChunks": true
+              }
           }
         },
         "serve": {
@@ -72,8 +80,12 @@
           "configurations": {
             "production": {
               "browserTarget": "meetingsdk-angular-sample:build:production"
+            },
+            "development": { 
+              "browserTarget": "meetingsdk-angular-sample:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
